@@ -1,0 +1,935 @@
+/* General Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Banner Section Styling */
+.banner {
+    width: 100%;
+    height: 230px; /* Default height for desktop */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit:fill; /* Ensure the banner covers the container */
+}
+
+/* Buttons Section Styling */
+.buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    justify-content: center; /* Center-align buttons */
+    gap: 38px; /* Spacing between buttons */
+    padding: 20px;
+    background-color:rgb(115, 194, 237);
+    color: white;
+}
+.btnr
+    {
+        display: flex;
+        justify-content: flex-start; /* Align buttons to the left */
+        align-items: center;
+        padding: 20px;
+        gap: 10px; /* Space between buttons */
+    }
+
+
+/* Button Styling */
+.button-64 {
+    font-size: 21px;
+    min-width: 120px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #6D5DF3, #45B8FF);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Button Hover and Active Effects */
+.button-64:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #FF6B6B, #FF9F43);
+}
+
+.button-64:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Section Styling */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .banner {
+        height: 200px; /* Adjust banner height for tablets */
+    }
+
+    .button-64 {
+        font-size: 12px;
+        min-width: 90px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 150px; /* Adjust banner height for smaller screens */
+    }
+
+    .button-64 {
+        font-size: 10px;
+        min-width: 80px;
+        padding: 6px 8px;
+    }
+}
+/* Dropdown Styling */
+.dropdown {
+    position:relative;
+    display:grid;
+}
+
+.dropdown-content {
+    display:none; /* Hide by default */
+    position:absolute; /* Ensure it can overlap other elements */
+    top: 80%; /* Position directly below the button */
+    left: 5; /* Align with the left edge of the dropdown trigger */
+    background-color: #fff; /* White background for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    padding: 20px;
+    border-radius: 9px;
+    width: 50;
+}
+
+.options-container {
+    display:list-item;
+    flex-direction:unset; /* Stack options vertically */
+    gap: 0px; /* Add spacing between options */
+}
+
+.dropdown-content a {
+    color: #7a3da8; /* Black text */
+    text-decoration: none; /* Remove underline */
+    display:block; /* Make each option block-level */
+    padding: 5px 50px; /* Padding for clickable area */
+    font-size: 25px; /* Adjust text size */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown:hover .button-64 {
+    background: linear-gradient(135deg, #FF6B6B, #FF9F43); /* Change button gradient on hover */
+}
+.image-slider {
+    /* Space between the buttons and the slider */
+    width: 100%;
+    height: 800px; /* Fixed height for the slider */
+    position:relative; /* For positioning the images */
+    overflow: hidden; /* Hide overflowing images */
+    /* Background for the slider */
+    border-radius: 10px;
+}
+
+.slider-image {
+    position:absolute;
+    
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill; /* Ensure full image is visible with aspect ratio */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth fade effect */
+    top:-10px;
+    
+}
+
+.slider-image.active {
+    opacity: 1; /* Show the active image */
+}
+.about-quicklinks {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* About Us Section */
+.about-us {
+    width: 66.66%; /* 2/3rd width */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text for content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.about-us p {
+    font-size: 1.5rem; /* Increase font size for readability */
+    font-family:italic; /* Use a serif font for an elegant style */
+    line-height: 2; /* Improve line spacing for better readability */
+    color:#05213f; /* Dark gray color for a softer look */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify; /* Justify text for a clean look */
+    font-style: italic;
+}
+
+.about-us h2 {
+    background-color:#25d16c; /* Blue background for heading */
+    color: #fff; /* White text for contrast */
+    padding: 10px;
+    margin: -20px -20px 20px -20px; /* Ensure heading spans the full div width */
+    border-radius: 8px 8px 0 0; /* Rounded corners for top heading */
+    text-align: left; /* Align text to the left */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+}
+/* Quick Links Section */
+.quick-links {
+    width: 33.33%; /* 1/3rd width */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text for content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.quick-links h3 {
+    background-color:#25d16c; /* Blue background for heading */
+    color: #fff; /* White text for contrast */
+    padding: 10px;
+    margin: -20px -20px 20px -20px; /* Ensure heading spans the full div width */
+    border-radius: 8px 8px 0 0; /* Rounded corners for top heading */
+    text-align: left; /* Align text to the left */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+}
+
+.links-container {
+    max-height: 300px; /* Height of the scroller */
+    overflow-y: auto;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.links-container a {
+    display: block;
+    text-decoration:wavy;
+    color: #05213f; /* Blue color for links */
+    padding: 5px 0;
+    font-size: 28px;
+    font-style: italic;
+}
+
+.links-container a:hover {
+    text-decoration: underline;
+    color: #f34a53; /* Darker blue on hover */
+}
+
+
+
+
+
+
+
+
+
+.links-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.links-container::-webkit-scrollbar-thumb {
+    background: #32f76a;
+    border-radius: 4px;
+}
+
+.links-container::-webkit-scrollbar-thumb:hover {
+    background: #f43030;
+}
+@media (max-width: 768px) {
+    .about-quicklinks {
+        flex-wrap: wrap;
+    }
+
+    .about-us, .quick-links {
+        width: 100%; /* Stack on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+.about-us h2:hover, .quick-links h2:hover {
+    color: #e0eae2; /* Change text color on hover */
+    background-color: #7b68f4; /* Change background to a light cyan color on hover */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+}
+.about-us h3:hover, .quick-links h3:hover {
+    color: #eeebe9; /* Change text color on hover */
+    background-color: #7b68f4; /* Change background to a light cyan color on hover */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styling */
+.footer {
+    background-color: #043c67;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Contact Section */
+.footer-contact h3, .footer-social h3, .footer-message h3 {
+    margin-bottom: 15px;
+    color: #f8c146;
+    font-size: 30px;
+}
+
+.footer-contact p {
+    line-height: 1.6;
+    font-size: 19px;
+}
+
+.footer-contact a {
+    color: #f8c146;
+    text-decoration: none;
+}
+
+/* Social Media Icons */
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    background-color: #444;
+    color: #f8c146;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    background-color: #f8c146;
+    color: #1a1a1a;
+    transform: scale(1.2);
+}
+
+/* Contact Form */
+.footer-message form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-message input, .footer-message textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footer-message textarea {
+    resize: none;
+    height: 100px;
+}
+
+.footer-message button {
+    background-color: #f8c146;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-message button:hover {
+    background-color: #1a1a1a;
+    color: #f8c146;
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+}
+
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stack inputs on smaller screens */
+    gap: 15px;
+}
+
+.form-input, 
+.form-textarea {
+    width: 100%; /* Adjust width dynamically */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none; /* Prevent textarea resizing */
+}
+
+.form-input:focus, 
+.form-textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .footer-contact {
+        padding: 15px;
+    }
+
+    .footer-contact h3 {
+        font-size: 1.25rem;
+    }
+
+    .form-input, 
+    .form-textarea {
+        font-size: 0.9rem;
+    }
+
+    .form-button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+
+/* Our Recruiters Section */
+.recruiters-section {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #f7f8fa; /* Light blue background for section */
+    border-radius: 1px;
+    position: relative;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.recruiters-heading {
+    font-size: 2rem;
+    color: #ebe6e6;
+    position: absolute; /* Stick to the top of the parent div */
+    top: 0; /* Align to the top of the div */
+    left: 0; /* Align to the left */
+    width: 100%; /* Ensure full width */
+    background-color:  #3bc545; /* Light blue background */
+    padding: 15px 20px; /* Padding for spacing */
+    border-radius: 10px 10px 0 0; /* Rounded top edges */
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Include padding in width calculation */
+    z-index: 1; /* Ensure it is above the slider content */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.recruiters-heading:hover {
+    color: #e8ede9; /* Darker green on hover */
+    background-color:#7b68f4; /* Change text color to white on hover */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.recruiters-slider {
+    width: 100%; /* Full-width slider */
+    height: 100px; /* Fixed height for the slider */
+    overflow: hidden; /* Hide content outside the div */
+    position: relative;
+    margin-top: 100px; /* Space below the heading */
+}
+
+.slider-logos {
+    display: flex;
+    gap: 20px; /* Space between logos */
+    animation: scroll-logos 30s linear infinite;
+}
+
+.slider-logos img {
+    width: 160px; /* Adjust logo size */
+    height: 90px;
+    display: block;
+}
+
+/* Animation for horizontal scrolling */
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+
+.faculty-link {
+    text-decoration:line-through;
+    font-size: 1.2rem;
+    color: #b4ee14; /* Bootstrap primary blue color */
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevents text from breaking onto a new line */
+    transition: all 0.3s ease;
+  }
+
+  .faculty-link:hover {
+    background-color: #b9f42d;
+    color: rgb(206, 7, 30);
+    transform: scale(1.05);
+  }
+  .underline {
+    border-bottom: 3px solid rgb(219, 47, 47); /* Bold black underline */
+    width: 100%; /* Adjust to the required width */
+    margin-bottom: 10px; /* Adds spacing after the line */
+  }
+
+
+
+
+
+
+
+
+
+
+ /* Banner Styling */
+.banners {
+    background: linear-gradient(90deg, #ffd700, #007bff); /* Bluish-yellow gradient */
+    color: white;
+    height: 250px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Prevent overflow during animation */
+    
+}
+
+/* Logo Styling */
+.banners-logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+    opacity: 0; /* Start invisible */
+    animation: fadeSlideIn 1s ease-out forwards; /* Logo animation */
+}
+
+/* Content Block Styling */
+.banners-content {
+    position: relative;
+    opacity: 0; /* Start invisible */
+    animation: fadeSlideIn 1s ease-out forwards 0.5s; /* Content animation starts after the logo */
+}
+
+.college-subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 0 0 10px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 0.7s; /* Subtitle animation */
+}
+
+.college-name {
+    font-size: 4rem; /* Larger font size for prominence */
+    font-weight: 800; /* Bold font weight */
+    font-style: italic;
+    font-family: 'Poppins', sans-serif; /* Elegant and modern font from Google Fonts */
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeInUp 1s ease-out forwards 1s; /* Animation for smooth entrance */
+    margin-left: 20px; /* Shift text slightly to the left */
+    letter-spacing: 2px; /* Slight spacing between letters for a more elegant look */
+    color: #fcf5f5; /* Dark color for good contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft text shadow for depth */
+    margin-top: -10px;
+}
+
+.affiliation-text {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1.3s; /* Affiliation animation */
+    margin-top: -10px;
+}
+
+/* Footer Text Styling */
+.banners-footer {
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0; /* Start invisible */
+    animation: fadeSlideIn 1s ease-out forwards 1.5s; /* Footer animation starts last */
+}
+
+.vsics-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1.5s; /* VSICS title animation */
+    position: relative;
+    margin: 0 auto; /* Center the title */
+    text-align: center; /* Center the text */
+}
+
+/* V S I C S Subtitle Styling */
+.vsics-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 5px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1.7s; /* VSICS subtitle animation */
+    text-align: center; /* Align subtitle to the center */
+}
+
+/* Keyframes for Animation */
+@keyframes fadeSlideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banners {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .banners-logo {
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .college-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .college-name {
+        font-size: 2.8rem;
+    }
+
+    .affiliation-text {
+        font-size: 1rem;
+    }
+
+    .vsics-title {
+        font-size: 1.3rem;
+    }
+
+    .vsics-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .college-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .college-name {
+        font-size: 2rem;
+    }
+
+    .affiliation-text {
+        font-size: 0.9rem;
+    }
+
+    .vsics-title {
+        font-size: 1.1rem;
+    }
+
+    .vsics-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Default animation styles for elements */
+.animated {
+    animation: fadeSlideIn 1s ease-out forwards;
+}
+
+/* Custom animations for specific elements */
+.banners-content.animated {
+    animation-delay: 0.5s;
+}
+
+.college-subtitle.animated {
+    animation-delay: 0.7s;
+}
+
+.college-name.animated {
+    animation-delay: 1s;
+}
+
+.affiliation-text.animated {
+    animation-delay: 1.3s;
+}
+
+.banners-footer.animated {
+    animation-delay: 1.5s;
+}
+
+.vsics-title.animated {
+    animation-delay: 1.5s;
+}
+
+.vsics-subtitle.animated {
+    animation-delay: 1.7s;
+}
+
+
+
+
+
+
+/* Logo Text Styling */
+.logo-text {
+    position: absolute;
+    top: 190px; /* Adjust to place below the logo */
+    left: 40px; /* Align with the logo */
+    font-size: 1.8rem; /* Adjust font size */
+    color: white; /* Match the banner color theme */
+}
+
+.course-list {
+    display: flex; /* Arrange items in a single line */
+    gap: 40px; /* Add space between the items */
+    list-style-type:disc; /* Use bullets for the list */
+    padding: 0;
+    margin: 0;
+}
+
+.course-list li {
+    font-weight: bold;
+}
+
+
+
+
+
+.kn-90 {
+    position:relative;
+    top: -180px; /* Adjust the position above the V S I C S */
+RIGHT: 40px; /* Align it to the right corner */
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: bold;
+    color: white; /* Match the color theme */
+    text-align:right;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+/*.footers-social .social-icons {
+    display:flex;
+    gap: 35px;
+    
+    
+}
+
+.footers-social .social-icon {
+    display: inline-block;
+    background-color: #444;
+    color: #f8c146;
+    padding: 21px;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    gap: 10px;
+    
+    
+}
+
+.footers-social .social-icon:hover {
+    background-color: #f8c146;
+    color: #1a1a1a;
+    transform: scale(1.2);
+}
+
+
+.footers-social{
+background-color:aquamarine;
+
+
+    
+}
+
+.footers-social{
+justify-content: center;
+}*/
+
+.navbarss {
+    background: linear-gradient(90deg, #ffd700, #00bfff);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .socials-icons {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  .socials-icons li {
+    display: inline-block;
+  }
+  .socials-icons li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 29px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .socials-icons li a:hover {
+    transform: scale(3.2);
+    color: #ffd700;
+  }
+
+
+
+
+
